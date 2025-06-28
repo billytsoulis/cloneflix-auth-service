@@ -128,4 +128,13 @@ public class JwtUtil {
         byte[] keyBytes = Decoders.BASE64.decode(secret);
         return Keys.hmacShaKeyFor(keyBytes);
     }
+
+    /**
+     * Public getter for the expiration time.
+     * This is needed to set the max-age of the HttpOnly cookie in UserController.
+     * @return The expiration time in milliseconds.
+     */
+    public long getExpiration() {
+        return expiration;
+    }
 }

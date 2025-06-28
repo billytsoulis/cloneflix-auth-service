@@ -9,3 +9,4 @@ POST http://localhost:8080/api/auth/register
   "password": "password123"
 }
 POST http://localhost:8080/api/auth/login
+
