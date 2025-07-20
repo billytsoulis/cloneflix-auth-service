@@ -2,6 +2,9 @@
 
 ./mvnw spring-boot:run
 
+./mvnw clean install
+./mvnw spring-boot:run
+
 Test:
 POST http://localhost:8080/api/auth/register
 {
@@ -10,3 +13,4 @@ POST http://localhost:8080/api/auth/register
 }
 POST http://localhost:8080/api/auth/login
 
+TRUNCATE TABLE users RESTART IDENTITY;
